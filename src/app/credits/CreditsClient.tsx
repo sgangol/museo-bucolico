@@ -102,19 +102,25 @@ export default function CreditsClient() {
             Gli attrezzi e i mezzi attualmente esposti in questo museo sono stati
             generosamente messi a disposizione da:
           </motion.h2>
-          <div className="grid md:grid-cols-2 gap-4">
+          <motion.div
+            className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ staggerChildren: 0.05 }}
+          >
             {exhibitors.map((name, index) => (
-              <div
+              <motion.div
                 key={index}
-                className="bg-brand-white p-4 text-center border border-brand-red/30"
+                className="bg-brand-white p-6 rounded-sm shadow-lg hover:shadow-xl hover:scale-[1.02] border-l-4 border-brand-red transition-all duration-300"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
               >
                 <span className="font-sans text-brand-gray">{name}</span>
-              </div>
+              </motion.div>
             ))}
-          </div>
-          <p className="mt-6 text-center text-brand-gray font-sans">
-            E da numerose famiglie e comuni del territorio
-          </p>
+          </motion.div>
         </div>
       </section>
 
