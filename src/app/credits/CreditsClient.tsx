@@ -1,9 +1,11 @@
 "use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
+import { usePathname } from "next/navigation";
 import Footer from "@/components/Footer";
 
 export default function CreditsClient() {
+  const pathname = usePathname();
   // useScroll senza target → usa window scroll (default)
   const { scrollYProgress } = useScroll({
     offset: ["start end", "end start"]
@@ -58,9 +60,9 @@ export default function CreditsClient() {
   };
 
   return (
-    <main className="flex min-h-screen flex-col bg-brand-white overflow-x-hidden">
+    <main key={pathname} className="flex min-h-screen flex-col bg-brand-white overflow-x-hidden">
       {/* Hero Section */}
-      <section className="relative py-24 px-6 bg-brand-dark overflow-hidden">
+      <section className="relative py-24 px-6 overflow-hidden">
         <motion.div
           className="absolute inset-0 bg-cover bg-center z-0"
           style={{
@@ -69,7 +71,8 @@ export default function CreditsClient() {
           }}
         />
         <div className="absolute inset-0 bg-brand-black/50 z-0" />
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-peach z-[1]" />
+        <div className="relative z-10 max-w-4xl mx-auto text-center">
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -95,7 +98,7 @@ export default function CreditsClient() {
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: false, margin: "-50px" }}
             transition={{ duration: 0.8 }}
             className="font-serif text-3xl text-brand-dark mb-8 text-center"
           >
@@ -103,16 +106,16 @@ export default function CreditsClient() {
             generosamente messi a disposizione da:
           </motion.h2>
           <motion.div
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
+            className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
+            viewport={{ once: false, margin: "-50px" }}
             transition={{ staggerChildren: 0.05 }}
           >
             {exhibitors.map((name, index) => (
               <motion.div
                 key={index}
-                className="bg-brand-white p-6 rounded-sm shadow-lg hover:shadow-xl hover:scale-[1.02] border-l-4 border-brand-red transition-all duration-300"
+                className="bg-brand-white p-6 rounded-sm shadow-lg active:scale-[0.98] border-l-4 border-brand-red transition-all duration-300"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
@@ -130,13 +133,13 @@ export default function CreditsClient() {
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: false, margin: "-50px" }}
             transition={{ duration: 0.8 }}
             className="font-serif text-4xl text-brand-dark mb-12 text-center"
           >
             Organigramma
           </motion.h2>
-          <div className="grid md:grid-cols-2 gap-x-12 gap-y-6">
+          <div className="grid md:grid-cols-2 gap-x-6 md:gap-x-12 gap-y-6">
             <div className="border-b border-brand-gray/20 pb-4">
               <h3 className="font-sans text-sm text-brand-red uppercase tracking-wider mb-1">
                 Presidente

@@ -1,36 +1,39 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Museo Bucolicò - Website Repository
 
-## Getting Started
+Benvenuti nel repository del sito web del **Museo Bucolicò**, il primo museo agricolo open-air del Piemonte, a Santa Maria del Tempio.
 
-First, run the development server:
+## Stack Tecnologico
+- **Framework:** Next.js 15 (App Router)
+- **UI/Styling:** Tailwind CSS v4
+- **Animazioni:** Framer Motion
+- **Icone:** Lucide React
+- **Linguaggio:** TypeScript
+- **Container:** Docker
 
+## Struttura del Progetto
+L'architettura segue una logica a componenti basata sull'esperienza di "Scrollytelling":
+- `src/app/page.tsx`: Pagina principale che assembla il racconto.
+- `src/components/`:
+  - `SeasonalHero`: Il banner iniziale immersivo.
+  - `TimelineNarrative`: Sezione parallax che cambia con le stagioni.
+  - `ArtifactGrid`: Galleria evocativa dei mezzi storici.
+  - `CommunitySection`: Storia della comunità e dell'Arch. Filippini.
+  - `VisitInfo`: Call to action e contatti.
+  - `Footer`: Footer con link e copyright.
+
+## Sviluppo Locale
+1. Assicurati di avere Node.js installato.
+2. Esegui `npm install` per installare le dipendenze.
+3. Esegui `npm run dev` per avviare il server di sviluppo su `http://localhost:3000`.
+
+Per testare la build di produzione localmente:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run build
+npm run start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Deployment
+Vedi il file [DEPLOYMENT.md](DEPLOYMENT.md) per istruzioni su come caricare il sito online tramite Docker o Vercel.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Aggiornamento Contenuti
+Vedi il file [CONTENT_GUIDE.md](CONTENT_GUIDE.md) per capire come modificare testi o immagini senza dover conoscere la programmazione avanzata.
