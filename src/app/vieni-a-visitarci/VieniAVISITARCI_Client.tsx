@@ -69,7 +69,7 @@ export default function VieniAVISITARCI_Client() {
       </section>
 
       {/* Map Section - Collage 3D Style */}
-      <section className="py-16 px-6 bg-brand-peach">
+      <section className="py-16 px-6 bg-brand-white">
         <div className="max-w-5xl mx-auto">
           <motion.div
             className="relative w-full mx-auto"
