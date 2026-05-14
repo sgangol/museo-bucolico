@@ -1,6 +1,7 @@
 import SeasonalHero from "@/components/SeasonalHero";
 import TimelineNarrative from "@/components/TimelineNarrative";
 import ArtifactGrid from "@/components/ArtifactGrid";
+import PercheBucolicoConta from "@/components/PercheBucolicoConta";
 import CommunitySection from "@/components/CommunitySection";
 import VisitInfo from "@/components/VisitInfo";
 import Footer from "@/components/Footer";
@@ -12,6 +13,7 @@ export default function Home() {
       <CommunitySection />
       <TimelineNarrative />
       <ArtifactGrid />
+      <PercheBucolicoConta />
       <VisitInfo />
       <Footer />
     </main>
