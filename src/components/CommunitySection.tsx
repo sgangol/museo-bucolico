@@ -69,19 +69,22 @@ export default function CommunitySection() {
           >
             <p className="text-2xl font-serif text-brand-red italic drop-shadow-sm">Siamo una comunità.<br />Siamo memoria che cammina.</p>
             <p>
-              Nati nei primi anni ’60 a Santa Maria del Tempio, frazione agricola di Casale Monferrato, siamo cresciuti da una semplice stanza al secondo piano di una casa privata — un luogo di lettura, dialogo, musica e amicizia — fino a diventare un punto di riferimento vivo per tutto il territorio.
+              Santa Maria del Tempio è una frazione agricola del Comune di Casale Monferrato, nel cuore del Basso Monferrato. Un borgo piccolo e radicato, con origini templari e francescane, i campi di grano che si distendono fino all&apos;orizzonte, l&apos;odore della terra che cambia con le stagioni. Un luogo che potrebbe essere dimenticato, e che invece ha scelto di ricordare.
             </p>
             <p>
-              Nel 1981 abbiamo scelto la nostra identità: il Circolo è intitolato al Geom. Umberto Piazza, giovane della frazione prematuramente scomparso, ricordato per la sua solarità, il senso civico e la generosità. Il suo nome rappresenta i valori che ci guidano ancora oggi.
+              L&apos;Associazione di Promozione Sociale di Santa Maria del Tempio è nata nei primi anni Sessanta, da una stanza al secondo piano di una casa privata: un posto dove leggere, parlare, fare musica, stare insieme. Da lì siamo cresciuti, lentamente e con ostinazione, fino a diventare un punto di riferimento vivo per tutta la comunità locale.
             </p>
             <p>
-              Associazione senza scopo di lucro iscritta al Terzo Settore e affiliata a CSEN, promuoviamo il territorio e creiamo occasioni di incontro attraverso eventi diventati parte dell’identità del Monferrato: il Rogo della Vegia, la Festa del Grano, la Castagnata, la Bottega dell’Ottimismo e il Santa Wave Festival.
+              Il nostro Circolo porta il nome del Geom. Umberto Piazza, giovane della frazione scomparso prematuramente nel 1981, ricordato per la solarità, il senso civico, la generosità. Il suo nome non è un&apos;intitolazione formale: è un promemoria quotidiano di come scegliamo di stare nel mondo.
             </p>
             <p>
-              Oggi il Circolo è uno spazio di aggregazione, ristorazione per i soci, cultura e musica dal vivo — aperto a volontari, famiglie, giovani e anziani che credono nella forza dello stare insieme.
+              Associazione di Promozione Sociale iscritta al Registro Unico del Terzo Settore, affiliata a CSEN, da decenni promuoviamo il territorio attraverso eventi che sono diventati parte dell&apos;identità del Monferrato. L&apos;Amson a la Madona, rievocazione della mietitura e trebbiatura del grano nata nel lontano 1992, è la radice da cui tutto è cresciuto. Insieme a lei, il Rogo della Vegia, la Bottega dell&apos;Ottimismo e il Santa Wave Festival.
+            </p>
+            <p>
+              L&apos;associazione gestisce un circolo aperto tutto l&apos;anno: uno spazio di aggregazione, cultura e musica, dove si incontrano volontari, famiglie, bambini, anziani, musicisti e artisti. Un luogo che cresce con chi lo abita.
             </p>
             <p className="font-medium text-brand-dark">
-              Dal sogno di una piccola stanza, continuiamo a costruire comunità, custodire la memoria, generare futuro.
+              Da quella piccola stanza continuiamo a costruire comunità, custodire la memoria, immaginare il futuro.
             </p>
           </motion.div>
         </motion.div>
