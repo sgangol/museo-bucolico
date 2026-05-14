@@ -16,7 +16,7 @@ export default function SostieniciClient() {
   const supportOptions = [
     {
       title: "Erogazioni Liberali",
-      description: "Il museo gestito interamente da volontari. Ogni donazione, piccola o grande, ci aiuta a preservare la storia agricoltura locale.",
+      description: "Il museo è gestito interamente da volontari. Le donazioni ci permettono di continuare il lavoro di recupero, restauro e valorizzazione del patrimonio agricolo. Ogni cifra è utile, e tutte le donazioni sono fiscalmente detraibili.",
       cta: "Contatta",
       ctaLink: "/contatti",
       quote: "Ogni gesto conta. Anche il tuo.",
@@ -24,25 +24,25 @@ export default function SostieniciClient() {
     },
     {
       title: "Sponsorizzazioni",
-      description: "Le aziende possono sostenerci con sponsorizzazioni, coniugando visibilità e valorizzazione del territorio.",
+      description: "Le aziende che scelgono di sostenerci trovano in Bucolicò un partner che parla al territorio con autenticità. Qui la visibilità non è pubblicità: è appartenenza.",
       cta: "Contatta",
       ctaLink: "/contatti",
       icon: Users,
     },
     {
       title: "Tesseramento",
-      description: "Diventa socio del nostro museo. La tessera il modo migliore per restare aggiornato sulle iniziative e partecipare alla vita del museo.",
+      description: "Diventare soci è il modo più diretto per essere parte di questa storia. La tessera dà accesso alla vita dell'associazione, agli eventi, alle iniziative, e soprattutto alla sensazione di contribuire a qualcosa che vale.",
       cta: "Diventa socio",
       ctaLink: "/contatti",
-      quote: "Quello che costruiamo qui non appartiene a nessuno in particolare appartiene a tutti.",
+      quote: "Quello che costruiamo qui è di tutti. È fatto di tempo donato, di oggetti affidati, di storie condivise.",
       icon: HandHeart,
     },
     {
       title: "Esponi da Noi",
-      description: "Hai attrezzi agricoli antichi? Il pezzo rimane tuo: tu lo presti, noi lo valorizziamo e lo esponiamo al pubblico.",
+      description: "Hai attrezzi, strumenti o macchinari agricoli che vorresti valorizzare? Il pezzo rimane tuo: tu lo affidi a noi, noi lo raccontiamo al pubblico. Insieme, trasformiamo un ricordo privato in patrimonio di tutti.",
       cta: "Scrivici",
       ctaLink: "/contatti",
-      quote: "Il pezzo rimane tuo: tu lo presti, noi lo valorizziamo.",
+      quote: "Il pezzo rimane tuo: tu lo affidi a noi, noi lo raccontiamo al pubblico.",
       icon: Archive,
     },
   ];
@@ -81,7 +81,7 @@ export default function SostieniciClient() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="font-serif text-2xl md:text-3xl text-brand-peach italic drop-shadow-lg"
           >
-            Ogni gesto conta. Anche il tuo.
+            Bucolicò vive grazie al lavoro volontario di chi ci crede, alla generosità di chi porta competenze e memoria, alla fiducia di chi sceglie di sostenerci concretamente. Ogni contributo, piccolo o grande, alimenta qualcosa di prezioso: una memoria condivisa, un luogo aperto, una comunità che continua a scegliere di stare insieme.
           </motion.p>
         </motion.div>
       </section>
@@ -184,7 +184,7 @@ export default function SostieniciClient() {
             transition={{ duration: 0.8 }}
             className="font-serif text-3xl md:text-4xl text-brand-peach italic leading-relaxed"
           >
-            &quot;Quello che costruiamo qui non appartiene a nessuno in particolare — appartiene a tutti.&quot;
+            &quot;Quello che costruiamo qui è di tutti. È fatto di tempo donato, di oggetti affidati, di storie condivise.&quot;
           </motion.blockquote>
           <motion.p
             initial={{ opacity: 0 }}
