@@ -5,6 +5,7 @@ import PercheBucolicoConta from "@/components/PercheBucolicoConta";
 import CommunitySection from "@/components/CommunitySection";
 import VisitInfo from "@/components/VisitInfo";
 import Footer from "@/components/Footer";
+import CTAButton from "@/components/CTAButton";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <TimelineNarrative />
       <ArtifactGrid />
       <PercheBucolicoConta />
+      <CTAButton />
       <VisitInfo />
       <Footer />
     </main>
