@@ -190,104 +190,108 @@ export default function VieniAVISITARCI_Client() {
       </section>
 
       {/* Map and Orari 3D Section */}
+      <section className="py-16 px-6 bg-brand-white">
+        <div className="max-w-6xl mx-auto space-y-8">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* 3D Map Card */}
+            <motion.div
+              className="perspective-1000"
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.8 }}
+            >
+              <motion.div
+                className="relative rounded-lg shadow-2xl overflow-hidden cursor-pointer transform-gpu"
+                variants={mapVariants}
+                initial="initial"
+                whileHover="hover"
+                whileTap={{ scale: 0.98 }}
+              >
+                <div className="absolute inset-0 bg-brand-black/20 z-10" />
+                <Image
+                  src="/images/mappa-sito.png"
+                  alt="Mappa del Museo Bucolicò"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+                <div className="absolute bottom-0 left-0 right-0 p-6 z-20 bg-gradient-to-t from-brand-black/80 to-transparent">
+                  <p className="font-serif text-xl md:text-2xl text-brand-white">
+                    Cantone Chiesa 34<br />
+                    15033 Santa Maria del Tempio (AL)
+                  </p>
+                </div>
+              </motion.div>
+            </motion.div>
 
-      <div className="grid md:grid-cols-2 gap-12 items-center">
-        {/* 3D Map Card */}
-        <motion.div
-          className="perspective-1000"
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 0.8 }}
-        >
-          <motion.div
-            className="relative rounded-lg shadow-2xl overflow-hidden cursor-pointer transform-gpu"
-            variants={mapVariants}
-            initial="initial"
-            whileHover="hover"
-            whileTap={{ scale: 0.98 }}
-          >
-            <div className="absolute inset-0 bg-brand-black/20 z-10" />
-            <Image
-              src="/images/mappa-sito.png"
-              alt="Mappa del Museo Bucolicò"
-              fill
-              className="object-cover"
-              priority
-            />
-            <div className="absolute bottom-0 left-0 right-0 p-6 z-20 bg-gradient-to-t from-brand-black/80 to-transparent">
-              <p className="font-serif text-xl md:text-2xl text-brand-white">
-                Cantone Chiesa 34<br />
-                15033 Santa Maria del Tempio (AL)
-              </p>
-            </div>
-          </motion.div>
-        </motion.div>
-
-        {/* 3D Orari Card */}
-        <motion.div
-          className="perspective-1000"
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-        >
-          <motion.div
-            className="relative rounded-lg shadow-2xl overflow-hidden cursor-pointer transform-gpu"
-            variants={orariVariants}
-            initial="initial"
-            whileHover="hover"
-            whileTap={{ scale: 0.98 }}
-          >
-            <div className="absolute inset-0 bg-brand-black/20 z-10" />
-            <Image
-              src="/images/orari.png"
-              alt="Orari di Apertura Museo Bucolicò"
-              fill
-              className="object-cover"
-              priority
-            />
-            <div className="absolute bottom-0 left-0 right-0 p-6 z-20 bg-gradient-to-t from-brand-black/80 to-transparent">
-              <p className="font-serif text-xl md:text-2xl text-brand-white">
-                Sabato-Domenica: 10:00-12:00, 16:00-19:00<br />
-                Giovedì (giugno-settembre): 16:00-19:00
-              </p>
-            </div>
-          </motion.div>
-        </motion.div>
-
-        {/* Contact CTA Section */}
-        < section className="py-16 px-6 bg-brand-red/10" >
-          <div className="max-w-3xl mx-auto text-center">
-            <div className="bg-brand-white p-8 md:p-12 rounded-sm shadow-xl border-t-4 border-brand-red">
-              <h2 className="font-serif text-3xl md:text-4xl text-brand-dark mb-6">
-                Prenota la tua Visita
-              </h2>
-              <p className="font-sans text-lg text-brand-gray mb-8">
-                Per informazioni, tesseramento e organizzare una visita guidata:
-              </p>
-              <div className="grid md:grid-cols-2 gap-6">
-                <a
-                  href="mailto:santamariadeltempio@gmail.com"
-                  className="flex items-center justify-center gap-3 bg-brand-white p-4 rounded-sm border border-brand-gray/30 hover:border-brand-red transition-all hover:bg-brand-red/5"
-                >
-                  <span className="font-serif text-xl text-brand-dark">santamariadeltempio@gmail.com</span>
-                </a>
-                <a
-                  href="tel:+393491961776"
-                  className="flex items-center justify-center gap-3 bg-brand-white p-4 rounded-sm border border-brand-gray/30 hover:border-brand-red transition-all hover:bg-brand-red/5"
-                >
-                  <span className="font-serif text-xl text-brand-dark">+39 349 1961776</span>
-                </a>
-              </div>
-              <p className="mt-6 text-center text-brand-gray font-sans text-sm">
-                Per partecipare agli eventi è necessario essere tesserati.
-              </p>
-            </div>
+            {/* 3D Orari Card */}
+            <motion.div
+              className="perspective-1000"
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              <motion.div
+                className="relative rounded-lg shadow-2xl overflow-hidden cursor-pointer transform-gpu"
+                variants={orariVariants}
+                initial="initial"
+                whileHover="hover"
+                whileTap={{ scale: 0.98 }}
+              >
+                <div className="absolute inset-0 bg-brand-black/20 z-10" />
+                <Image
+                  src="/images/orari.png"
+                  alt="Orari di Apertura Museo Bucolicò"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+                <div className="absolute bottom-0 left-0 right-0 p-6 z-20 bg-gradient-to-t from-brand-black/80 to-transparent">
+                  <p className="font-serif text-xl md:text-2xl text-brand-white">
+                    Sabato-Domenica: 10:00-12:00, 16:00-19:00<br />
+                    Giovedì (giugno-settembre): 16:00-19:00
+                  </p>
+                </div>
+              </motion.div>
+            </motion.div>
           </div>
-        </section >
+        </div>
+      </section>
 
-        <Footer />
-    </main >
+      {/* Contact CTA Section */}
+      <section className="py-16 px-6 bg-brand-red/10">
+        <div className="max-w-3xl mx-auto text-center">
+          <div className="bg-brand-white p-8 md:p-12 rounded-sm shadow-xl border-t-4 border-brand-red">
+            <h2 className="font-serif text-3xl md:text-4xl text-brand-dark mb-6">
+              Prenota la tua Visita
+            </h2>
+            <p className="font-sans text-lg text-brand-gray mb-8">
+              Per informazioni, tesseramento e organizzare una visita guidata:
+            </p>
+            <div className="grid md:grid-cols-2 gap-6">
+              <a
+                href="mailto:santamariadeltempio@gmail.com"
+                className="flex items-center justify-center gap-3 bg-brand-white p-4 rounded-sm border border-brand-gray/30 hover:border-brand-red transition-all hover:bg-brand-red/5"
+              >
+                <span className="font-serif text-xl text-brand-dark">santamariadeltempio@gmail.com</span>
+              </a>
+              <a
+                href="tel:+393491961776"
+                className="flex items-center justify-center gap-3 bg-brand-white p-4 rounded-sm border border-brand-gray/30 hover:border-brand-red transition-all hover:bg-brand-red/5"
+              >
+                <span className="font-serif text-xl text-brand-dark">+39 349 1961776</span>
+              </a>
+            </div>
+            <p className="mt-6 text-center text-brand-gray font-sans text-sm">
+              Per partecipare agli eventi è necessario essere tesserati.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </main>
   );
 }
