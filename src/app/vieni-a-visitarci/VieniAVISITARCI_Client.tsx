@@ -107,7 +107,7 @@ export default function VieniAVISITARCI_Client() {
                   </li>
                   <li className="flex justify-between border-b border-brand-gray/20 pb-2">
                     <span>Martedì</span>
-                    <span className="font-semibold text-brand-red">18:00 - 24:00</span>
+                    <span className="text-brand-gray">18:00 - 24:00</span>
                   </li>
                   <li className="flex justify-between border-b border-brand-gray/20 pb-2">
                     <span>Mercoledì</span>
