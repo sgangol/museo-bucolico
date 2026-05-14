@@ -255,42 +255,39 @@ export default function VieniAVISITARCI_Client() {
             </div>
           </motion.div>
         </motion.div>
-      </div>
-    </div>
-      </section >
 
-    {/* Contact CTA Section */ }
-    < section className = "py-16 px-6 bg-brand-red/10" >
-      <div className="max-w-3xl mx-auto text-center">
-        <div className="bg-brand-white p-8 md:p-12 rounded-sm shadow-xl border-t-4 border-brand-red">
-          <h2 className="font-serif text-3xl md:text-4xl text-brand-dark mb-6">
-            Prenota la tua Visita
-          </h2>
-          <p className="font-sans text-lg text-brand-gray mb-8">
-            Per informazioni, tesseramento e organizzare una visita guidata:
-          </p>
-          <div className="grid md:grid-cols-2 gap-6">
-            <a
-              href="mailto:santamariadeltempio@gmail.com"
-              className="flex items-center justify-center gap-3 bg-brand-white p-4 rounded-sm border border-brand-gray/30 hover:border-brand-red transition-all hover:bg-brand-red/5"
-            >
-              <span className="font-serif text-xl text-brand-dark">santamariadeltempio@gmail.com</span>
-            </a>
-            <a
-              href="tel:+393491961776"
-              className="flex items-center justify-center gap-3 bg-brand-white p-4 rounded-sm border border-brand-gray/30 hover:border-brand-red transition-all hover:bg-brand-red/5"
-            >
-              <span className="font-serif text-xl text-brand-dark">+39 349 1961776</span>
-            </a>
+        {/* Contact CTA Section */}
+        < section className="py-16 px-6 bg-brand-red/10" >
+          <div className="max-w-3xl mx-auto text-center">
+            <div className="bg-brand-white p-8 md:p-12 rounded-sm shadow-xl border-t-4 border-brand-red">
+              <h2 className="font-serif text-3xl md:text-4xl text-brand-dark mb-6">
+                Prenota la tua Visita
+              </h2>
+              <p className="font-sans text-lg text-brand-gray mb-8">
+                Per informazioni, tesseramento e organizzare una visita guidata:
+              </p>
+              <div className="grid md:grid-cols-2 gap-6">
+                <a
+                  href="mailto:santamariadeltempio@gmail.com"
+                  className="flex items-center justify-center gap-3 bg-brand-white p-4 rounded-sm border border-brand-gray/30 hover:border-brand-red transition-all hover:bg-brand-red/5"
+                >
+                  <span className="font-serif text-xl text-brand-dark">santamariadeltempio@gmail.com</span>
+                </a>
+                <a
+                  href="tel:+393491961776"
+                  className="flex items-center justify-center gap-3 bg-brand-white p-4 rounded-sm border border-brand-gray/30 hover:border-brand-red transition-all hover:bg-brand-red/5"
+                >
+                  <span className="font-serif text-xl text-brand-dark">+39 349 1961776</span>
+                </a>
+              </div>
+              <p className="mt-6 text-center text-brand-gray font-sans text-sm">
+                Per partecipare agli eventi è necessario essere tesserati.
+              </p>
+            </div>
           </div>
-          <p className="mt-6 text-center text-brand-gray font-sans text-sm">
-            Per partecipare agli eventi è necessario essere tesserati.
-          </p>
-        </div>
-      </div>
-      </section >
+        </section >
 
-    <Footer />
+        <Footer />
     </main >
   );
 }
