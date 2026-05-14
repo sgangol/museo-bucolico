@@ -189,74 +189,27 @@ export default function VieniAVISITARCI_Client() {
         </div>
       </section>
 
-      {/* Map and Orari 3D Section */}
+      {/* Map Section - Collage 3D Style */}
       <section className="py-16 px-6 bg-brand-white">
-        <div className="max-w-6xl mx-auto space-y-8">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            {/* 3D Map Card */}
-            <motion.div
-              className="perspective-1000"
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.8 }}
-            >
-              <motion.div
-                className="relative rounded-lg shadow-2xl overflow-hidden cursor-pointer transform-gpu"
-                variants={mapVariants}
-                initial="initial"
-                whileHover="hover"
-                whileTap={{ scale: 0.98 }}
-              >
-                <div className="absolute inset-0 bg-brand-black/20 z-10" />
-                <Image
-                  src="/images/mappa-sito.png"
-                  alt="Mappa del Museo Bucolicò"
-                  fill
-                  className="object-cover"
-                  priority
-                />
-                <div className="absolute bottom-0 left-0 right-0 p-6 z-20 bg-gradient-to-t from-brand-black/80 to-transparent">
-                  <p className="font-serif text-xl md:text-2xl text-brand-white">
-                    Cantone Chiesa 34<br />
-                    15033 Santa Maria del Tempio (AL)
-                  </p>
-                </div>
-              </motion.div>
-            </motion.div>
-
-            {/* 3D Orari Card */}
-            <motion.div
-              className="perspective-1000"
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            >
-              <motion.div
-                className="relative rounded-lg shadow-2xl overflow-hidden cursor-pointer transform-gpu"
-                variants={orariVariants}
-                initial="initial"
-                whileHover="hover"
-                whileTap={{ scale: 0.98 }}
-              >
-                <div className="absolute inset-0 bg-brand-black/20 z-10" />
-                <Image
-                  src="/images/orari.png"
-                  alt="Orari di Apertura Museo Bucolicò"
-                  fill
-                  className="object-cover"
-                  priority
-                />
-                <div className="absolute bottom-0 left-0 right-0 p-6 z-20 bg-gradient-to-t from-brand-black/80 to-transparent">
-                  <p className="font-serif text-xl md:text-2xl text-brand-white">
-                    Sabato-Domenica: 10:00-12:00, 16:00-19:00<br />
-                    Giovedì (giugno-settembre): 16:00-19:00
-                  </p>
-                </div>
-              </motion.div>
-            </motion.div>
-          </div>
+        <div className="max-w-5xl mx-auto">
+          <motion.div
+            className="relative w-full mx-auto"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            <div className="bg-white rounded-xl shadow-2xl rotate-1 p-4 md:p-6">
+              <Image
+                src="/images/mappa_museo.png"
+                alt="Mappa del Museo Bucolicò"
+                width={1200}
+                height={800}
+                className="w-full h-auto object-contain rounded-lg"
+                priority
+              />
+            </div>
+          </motion.div>
         </div>
       </section>
 
