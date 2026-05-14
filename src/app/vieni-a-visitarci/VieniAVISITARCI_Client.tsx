@@ -8,26 +8,6 @@ import Footer from "@/components/Footer";
 export default function VieniAVISITARCI_Client() {
   const pathname = usePathname();
 
-  const mapVariants = {
-    initial: { rotateX: 0, rotateY: 0, y: 0 },
-    hover: {
-      rotateX: 10,
-      rotateY: 10,
-      y: -20,
-      transition: { type: "spring", stiffness: 100, damping: 20 }
-    }
-  } as const;
-
-  const orariVariants = {
-    initial: { rotateX: 0, rotateY: 0, y: 0 },
-    hover: {
-      rotateX: -10,
-      rotateY: -10,
-      y: -20,
-      transition: { type: "spring", stiffness: 100, damping: 20 }
-    }
-  } as const;
-
   return (
     <main key={pathname} className="flex min-h-screen flex-col bg-brand-white overflow-x-hidden">
       {/* Hero Section */}
@@ -88,8 +68,32 @@ export default function VieniAVISITARCI_Client() {
         </div>
       </section>
 
-      {/* Hours Section */}
+      {/* Map Section - Collage 3D Style */}
       <section className="py-16 px-6 bg-brand-peach">
+        <div className="max-w-5xl mx-auto">
+          <motion.div
+            className="relative w-full mx-auto"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            <div className="bg-white rounded-xl shadow-2xl rotate-1 p-4 md:p-6">
+              <Image
+                src="/images/mappa_museo.png"
+                alt="Mappa del Museo Bucolicò"
+                width={1200}
+                height={800}
+                className="w-full h-auto object-contain rounded-lg"
+                priority
+              />
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Hours Section */}
+      <section className="py-16 px-6 bg-brand-red">
         <div className="max-w-6xl mx-auto">
           <div className="bg-brand-white p-8 md:p-12 rounded-sm shadow-xl border-t-4 border-brand-red">
             <h2 className="font-serif text-3xl md:text-4xl text-brand-dark mb-8 text-center">
@@ -189,32 +193,8 @@ export default function VieniAVISITARCI_Client() {
         </div>
       </section>
 
-      {/* Map Section - Collage 3D Style */}
-      <section className="py-16 px-6 bg-brand-white">
-        <div className="max-w-5xl mx-auto">
-          <motion.div
-            className="relative w-full mx-auto"
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            <div className="bg-white rounded-xl shadow-2xl rotate-1 p-4 md:p-6">
-              <Image
-                src="/images/mappa_museo.png"
-                alt="Mappa del Museo Bucolicò"
-                width={1200}
-                height={800}
-                className="w-full h-auto object-contain rounded-lg"
-                priority
-              />
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
       {/* Contact CTA Section */}
-      <section className="py-16 px-6 bg-brand-red/10">
+      <section className="py-16 px-6 bg-brand-red">
         <div className="max-w-3xl mx-auto text-center">
           <div className="bg-brand-white p-8 md:p-12 rounded-sm shadow-xl border-t-4 border-brand-red">
             <h2 className="font-serif text-3xl md:text-4xl text-brand-dark mb-6">
