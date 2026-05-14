@@ -11,6 +11,7 @@ export default function Footer() {
           <Link href="/sostienici" className="hover:text-brand-red transition-colors">Sostienici</Link>
           <Link href="/credits" className="hover:text-brand-red transition-colors">Credits</Link>
           <Link href="/contatti" className="hover:text-brand-red transition-colors">Contatti</Link>
+          <Link href="/vieni-a-visitarci" className="hover:text-brand-red transition-colors">Vieni a visitarci</Link>
         </div>
       </div>
     </footer>

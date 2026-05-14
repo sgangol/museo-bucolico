@@ -3,32 +3,13 @@
 import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
+import Footer from "@/components/Footer";
 
 export default function VieniAVISITARCI_Client() {
   const pathname = usePathname();
 
-  const mapVariants = {
-    initial: { rotateX: 0, rotateY: 0, y: 0 },
-    hover: {
-      rotateX: 10,
-      rotateY: 10,
-      y: -20,
-      transition: { type: "spring", stiffness: 100, damping: 20 }
-    }
-  } as const;
-
-  const orariVariants = {
-    initial: { rotateX: 0, rotateY: 0, y: 0 },
-    hover: {
-      rotateX: -10,
-      rotateY: -10,
-      y: -20,
-      transition: { type: "spring", stiffness: 100, damping: 20 }
-    }
-  } as const;
-
   return (
-    <main key={pathname} className="flex min-h-screen flex-col bg-brand-white overflow-x-hidden">
+    <main key={pathname} className="flex min-h-screen flex-col overflow-x-hidden">
       {/* Hero Section */}
       <motion.section
         className="relative py-32 px-6 overflow-hidden"
@@ -48,7 +29,7 @@ export default function VieniAVISITARCI_Client() {
         {/* Dark overlay to make text more readable */}
         <div className="absolute inset-0 bg-brand-black/60 z-0" />
         {/* Gradient to blend smoothly with the next section */}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-peach z-0" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-white z-0" />
 
         <div className="relative z-10 max-w-4xl mx-auto text-center">
           <motion.h1
@@ -65,10 +46,11 @@ export default function VieniAVISITARCI_Client() {
         </div>
       </motion.section>
 
-      {/* Intro Section */}
-      <section className="py-16 px-6 bg-brand-white">
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-brand-white p-8 md:p-12 rounded-sm shadow-xl border-t-4 border-brand-red">
+      {/* Intro & Map Section - White Background */}
+      <section className="py-20 px-6 relative bg-brand-white">
+        <div className="max-w-4xl mx-auto space-y-8">
+          {/* Intro Card */}
+          <div className="bg-brand-white p-8 md:p-12 rounded-sm shadow-2xl border-t-4 border-brand-red">
             <h2 className="font-serif text-3xl md:text-4xl text-brand-dark mb-8 text-center">
               Il Museo Bucolicò
             </h2>
@@ -84,125 +66,133 @@ export default function VieniAVISITARCI_Client() {
               storia di fatica, ingegno e memoria.
             </p>
           </div>
+
+          {/* Map Card */}
+          <motion.div
+            className="relative group"
+            whileHover={{ scale: 1.02, rotateY: 5, rotateX: 5 }}
+            transition={{ type: "spring", stiffness: 300, damping: 20 }}
+            style={{ perspective: "1000px" }}
+          >
+            <div className="relative rounded-xl shadow-2xl border-4 border-brand-white overflow-hidden bg-brand-white">
+              <Image
+                src="/images/mappa_museo.png"
+                alt="Mappa degli spazi del Museo Bucolicò"
+                width={1200}
+                height={800}
+                className="w-full h-auto"
+                priority
+              />
+            </div>
+          </motion.div>
         </div>
       </section>
 
-      {/* Hours Section */}
-      <section className="py-16 px-6 bg-brand-peach/30">
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-brand-white p-8 md:p-12 rounded-sm shadow-xl border-t-4 border-brand-red">
+      {/* Hours Section - Red Background */}
+      <section className="py-16 px-6 bg-brand-red">
+        <div className="max-w-6xl mx-auto">
+          <div className="bg-brand-white p-8 md:p-12 rounded-sm shadow-2xl border-t-4 border-brand-red">
             <h2 className="font-serif text-3xl md:text-4xl text-brand-dark mb-8 text-center">
               Orari di Apertura
             </h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-brand-white p-6 rounded-sm border border-brand-gray/20 shadow-sm">
-                <h3 className="font-serif text-2xl text-brand-dark mb-4">Aprile - Ottobre</h3>
-                <p className="font-sans text-lg text-brand-gray">
-                  <span className="font-semibold text-brand-red">Sabato e Domenica:</span><br />
-                  10:00 - 12:00 e 16:00 - 19:00
-                </p>
+
+            <div className="grid md:grid-cols-2 gap-8 mb-8">
+              {/* Primavera/Estate */}
+              <div className="bg-brand-white/50 p-6 rounded-sm border border-brand-gray/20 shadow-sm">
+                <h3 className="font-serif text-2xl text-brand-dark mb-4">Primavera / Estate</h3>
+                <ul className="font-sans text-lg text-brand-gray space-y-2">
+                  <li className="flex justify-between border-b border-brand-gray/20 pb-2">
+                    <span>Lunedì</span>
+                    <span className="font-semibold text-brand-red">CHIUSO</span>
+                  </li>
+                  <li className="flex justify-between border-b border-brand-gray/20 pb-2">
+                    <span>Martedì</span>
+                    <span className="font-semibold text-brand-red">CHIUSO</span>
+                  </li>
+                  <li className="flex justify-between border-b border-brand-gray/20 pb-2">
+                    <span>Mercoledì</span>
+                    <span>18:00 - 20:30</span>
+                  </li>
+                  <li className="flex justify-between border-b border-brand-gray/20 pb-2">
+                    <span>Giovedì</span>
+                    <span>18:00 - 24:00</span>
+                  </li>
+                  <li className="flex justify-between border-b border-brand-gray/20 pb-2">
+                    <span>Venerdì</span>
+                    <span>18:00 - 01:00</span>
+                  </li>
+                  <li className="flex justify-between border-b border-brand-gray/20 pb-2">
+                    <span>Sabato</span>
+                    <span>18:00 - 02:00</span>
+                  </li>
+                  <li className="flex justify-between pb-2">
+                    <span>Domenica</span>
+                    <span>10:30 - 13:00 / 16:00 - 21:00</span>
+                  </li>
+                </ul>
               </div>
-              <div className="bg-brand-white p-6 rounded-sm border border-brand-gray/20 shadow-sm">
-                <h3 className="font-serif text-2xl text-brand-dark mb-4">Giugno - Settembre</h3>
-                <p className="font-sans text-lg text-brand-gray">
-                  <span className="font-semibold text-brand-red">Giovedì:</span><br />
-                  16:00 - 19:00
-                </p>
+
+              {/* Autunno/Inverno */}
+              <div className="bg-brand-white/50 p-6 rounded-sm border border-brand-gray/20 shadow-sm">
+                <h3 className="font-serif text-2xl text-brand-dark mb-4">Autunno / Inverno</h3>
+                <ul className="font-sans text-lg text-brand-gray space-y-2">
+                  <li className="flex justify-between border-b border-brand-gray/20 pb-2">
+                    <span>Lunedì</span>
+                    <span className="font-semibold text-brand-red">CHIUSO</span>
+                  </li>
+                  <li className="flex justify-between border-b border-brand-gray/20 pb-2">
+                    <span>Martedì</span>
+                    <span className="font-semibold text-brand-red">CHIUSO</span>
+                  </li>
+                  <li className="flex justify-between border-b border-brand-gray/20 pb-2">
+                    <span>Mercoledì</span>
+                    <span className="font-semibold text-brand-red">CHIUSO</span>
+                  </li>
+                  <li className="flex justify-between border-b border-brand-gray/20 pb-2">
+                    <span>Giovedì</span>
+                    <span>18:00 - 24:00</span>
+                  </li>
+                  <li className="flex justify-between border-b border-brand-gray/20 pb-2">
+                    <span>Venerdì</span>
+                    <span>18:00 - 01:00</span>
+                  </li>
+                  <li className="flex justify-between border-b border-brand-gray/20 pb-2">
+                    <span>Sabato</span>
+                    <span>18:00 - 02:00</span>
+                  </li>
+                  <li className="flex justify-between pb-2">
+                    <span>Domenica</span>
+                    <span>10:30 - 13:00 / 16:00 - 21:00</span>
+                  </li>
+                </ul>
               </div>
             </div>
-            <div className="mt-8 pt-6 border-t border-brand-gray/20">
-              <p className="font-sans text-lg text-brand-gray text-center">
-                <span className="font-semibold text-brand-red">Visite guidate:</span> su prenotazione per gruppi e scolaresche
+
+            {/* Info Contatti */}
+            <div className="mt-8 pt-6 border-t-2 border-brand-red">
+              <p className="font-sans text-lg text-brand-gray text-center mb-4">
+                Per visite fuori orario, gruppi, eventi su misura e informazioni:
+              </p>
+              <div className="text-center mb-6">
+                <a
+                  href="tel:+393491961776"
+                  className="inline-flex items-center justify-center bg-brand-red text-brand-white px-6 py-3 rounded-lg text-lg font-medium hover:bg-brand-dark transition-all"
+                >
+                  +39 349 1961776
+                </a>
+              </div>
+              <p className="font-serif text-xl md:text-2xl text-brand-red italic text-center">
+                &quot;BUCOLICÒ SEGUE IL RITMO DELLE STAGIONI: OGNI VISITA È DIVERSA DALLE PRECEDENTI&quot;
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Map and Orari 3D Section */}
-      <section className="py-24 px-6 bg-brand-white">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="font-serif text-4xl md:text-5xl text-brand-dark mb-4">
-              Trovaci e Scopri gli Orari
-            </h2>
-            <p className="font-sans text-lg text-brand-gray">
-              Esplora la posizione e pianifica la tua visita
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            {/* 3D Map Card */}
-            <motion.div
-              className="perspective-1000"
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.8 }}
-            >
-              <motion.div
-                className="relative rounded-lg shadow-2xl overflow-hidden cursor-pointer transform-gpu"
-                variants={mapVariants}
-                initial="initial"
-                whileHover="hover"
-                whileTap={{ scale: 0.98 }}
-              >
-                <div className="absolute inset-0 bg-brand-black/20 z-10" />
-                <Image
-                  src="/images/mappa-sito.png"
-                  alt="Mappa del Museo Bucolicò"
-                  fill
-                  className="object-cover"
-                  priority
-                />
-                <div className="absolute bottom-0 left-0 right-0 p-6 z-20 bg-gradient-to-t from-brand-black/80 to-transparent">
-                  <p className="font-serif text-xl md:text-2xl text-brand-white">
-                    Cantone Chiesa 34<br />
-                    15033 Santa Maria del Tempio (AL)
-                  </p>
-                </div>
-              </motion.div>
-            </motion.div>
-
-            {/* 3D Orari Card */}
-            <motion.div
-              className="perspective-1000"
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            >
-              <motion.div
-                className="relative rounded-lg shadow-2xl overflow-hidden cursor-pointer transform-gpu"
-                variants={orariVariants}
-                initial="initial"
-                whileHover="hover"
-                whileTap={{ scale: 0.98 }}
-              >
-                <div className="absolute inset-0 bg-brand-black/20 z-10" />
-                <Image
-                  src="/images/orari.png"
-                  alt="Orari di Apertura Museo Bucolicò"
-                  fill
-                  className="object-cover"
-                  priority
-                />
-                <div className="absolute bottom-0 left-0 right-0 p-6 z-20 bg-gradient-to-t from-brand-black/80 to-transparent">
-                  <p className="font-serif text-xl md:text-2xl text-brand-white">
-                    Sabato-Domenica: 10:00-12:00, 16:00-19:00<br />
-                    Giovedì (giugno-settembre): 16:00-19:00
-                  </p>
-                </div>
-              </motion.div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact CTA Section */}
-      <section className="py-16 px-6 bg-brand-red/10">
+      {/* Contact CTA Section - Red Background */}
+      <section className="py-16 px-6 bg-brand-red">
         <div className="max-w-3xl mx-auto text-center">
-          <div className="bg-brand-white p-8 md:p-12 rounded-sm shadow-xl border-t-4 border-brand-red">
+          <div className="bg-brand-white p-8 md:p-12 rounded-sm shadow-2xl border-t-4 border-brand-red">
             <h2 className="font-serif text-3xl md:text-4xl text-brand-dark mb-6">
               Prenota la tua Visita
             </h2>
@@ -212,13 +202,13 @@ export default function VieniAVISITARCI_Client() {
             <div className="grid md:grid-cols-2 gap-6">
               <a
                 href="mailto:santamariadeltempio@gmail.com"
-                className="flex items-center justify-center gap-3 bg-brand-white p-4 rounded-sm border border-brand-gray/30 hover:border-brand-red transition-all hover:bg-brand-red/5"
+                className="flex items-center justify-center gap-3 bg-brand-white p-4 rounded-sm border-2 border-brand-gray hover:border-brand-red transition-all hover:bg-brand-peach/30"
               >
                 <span className="font-serif text-xl text-brand-dark">santamariadeltempio@gmail.com</span>
               </a>
               <a
                 href="tel:+393491961776"
-                className="flex items-center justify-center gap-3 bg-brand-white p-4 rounded-sm border border-brand-gray/30 hover:border-brand-red transition-all hover:bg-brand-red/5"
+                className="flex items-center justify-center gap-3 bg-brand-white p-4 rounded-sm border-2 border-brand-gray hover:border-brand-red transition-all hover:bg-brand-peach/30"
               >
                 <span className="font-serif text-xl text-brand-dark">+39 349 1961776</span>
               </a>
@@ -229,6 +219,8 @@ export default function VieniAVISITARCI_Client() {
           </div>
         </div>
       </section>
+
+      <Footer />
     </main>
   );
 }
