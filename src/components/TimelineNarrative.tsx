@@ -38,10 +38,9 @@ export default function TimelineNarrative() {
             <h2 className="font-serif text-5xl md:text-7xl text-brand-dark mb-8 text-center md:text-left drop-shadow-sm">Il Museo</h2>
             <div className="font-sans text-lg md:text-2xl leading-relaxed text-brand-gray space-y-6">
               <p className="text-3xl font-serif text-brand-red italic mb-8">Un museo a cielo aperto, dove la terra racconta.</p>
-              <p>Bucolicò è molto più di un&apos;esposizione: è un <strong>Museo agricolo open air</strong> di mezzi e attrezzi d&apos;epoca, dove la storia contadina prende vita e respiro.</p>
-              <p>Trattori e strumenti, provenienti da collezioni private e donati appositamente, diventano patrimonio collettivo. Non si tratta solo di conservare oggetti, ma di attuare un profondo <em>recupero di memoria e identità</em>.</p>
-              <p>Un ambizioso progetto dell&apos;Arch. Simone Filippini che intende esaltare il meraviglioso contesto agricolo del quartiere di Santa Maria del Tempio, rispettandone e valorizzandone la storia, riorganizzando in modo funzionale e armonico gli spazi.</p>
-              <p className="border-l-4 border-brand-red pl-6 py-2 my-8 text-brand-dark font-medium italic">Un racconto intimo di come la comunità vede, percepisce e attribuisce valore al proprio territorio: alle sue memorie, alla sua gente, alle sue trasformazioni, alla sua realtà attuale e a come vorrebbe che fosse in futuro.</p>
+              <p>Bucolicò è il primo museo agricolo open air del Monferrato. Non un luogo di conservazione statica, ma un paesaggio vissuto, uno spazio in cui la storia agricola non è dietro una teca di vetro ma sotto i piedi, tra le mani, nell&apos;aria. Un organismo vivo che respira con le stagioni, si trasforma con la luce, parla a chi sa fermarsi ad ascoltare.</p>
+              <p>Trattori e attrezzi provenienti da collezioni private, donati con generosità da chi li custodiva come reliquie di famiglia, diventano qui patrimonio collettivo. Ogni oggetto è una voce che aspettava di essere ascoltata. Porta con sé la fatica e l&apos;ingegno di chi ha lavorato questa terra curvo sotto il sole, senza monumenti e senza archivi, solo mani, stagioni, e la certezza silenziosa che il lavoro avesse senso. Generazioni intere che non immaginavano di essere storia, e che Bucolicò ha scelto di non lasciare andare.</p>
+              <p>Il progetto è dell&apos;Arch. Simone Filippini, e nasce da una visione precisa: esaltare il contesto agricolo di Santa Maria del Tempio rispettandone la storia, riorganizzando gli spazi in modo funzionale e armonico, restituendo al borgo una dignità che il tempo non ha tolto ma che troppo spesso si fatica a vedere. Bucolicò è nato da un lavoro condiviso tra la comunità, la Parrocchia e il Circolo. È cresciuto grazie a mani volontarie, a competenze donate, alla pazienza di chi sapeva restaurare e a quella di chi sapeva aspettare. Ogni elemento del percorso porta in sé il segno di questa collaborazione, dalla targa &quot;Testi Caùdi d&apos;la Madona&quot; fino a quella di &quot;BarColicò&quot;, forgiate a mano da artigiani del posto, sono un atto d&apos;amore verso questo luogo.</p>
             </div>
           </div>
         </motion.div>
@@ -52,19 +51,10 @@ export default function TimelineNarrative() {
         >
           <div className="bg-brand-dark/95 backdrop-blur-xl p-8 md:p-14 border-b-4 border-brand-red shadow-2xl rounded-sm ml-auto text-brand-white">
             <div className="font-sans text-lg md:text-2xl leading-relaxed space-y-6">
-              <p>Nato da un progetto condiviso tra la comunità, la Parrocchia e il Circolo Geom. Umberto Piazza, il museo integra negli spazi della frazione percorsi dedicati alla storia e all&apos;evoluzione dell&apos;agricoltura.</p>
-              <p>Non un semplice spazio espositivo, ma un organismo vivo che respira con le stagioni e racconta il territorio attraverso ciò che lo ha costruito — <em>la lavorazione agricola, il sapere contadino, l&apos;ingegno delle mani</em>.</p>
-              <p>Trattori, attrezzi e strumenti del passato, recuperati e restaurati grazie all&apos;incredibile competenza di artigiani e agricoltori locali, tornano a parlare. Ogni oggetto custodisce una storia di fatica, innovazione, cambiamento e continuità.</p>
-              
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 py-8 border-y border-brand-white/20 my-8">
-                <div className="text-center"><span className="block text-brand-red font-serif text-3xl">Primavera</span><span className="text-sm uppercase tracking-widest opacity-80">semina</span></div>
-                <div className="text-center"><span className="block text-brand-peach font-serif text-3xl">Estate</span><span className="text-sm uppercase tracking-widest opacity-80">grano dorato</span></div>
-                <div className="text-center"><span className="block text-brand-dark font-serif text-3xl">Autunno</span><span className="text-sm uppercase tracking-widest opacity-80">raccolto</span></div>
-                <div className="text-center"><span className="block text-brand-gray font-serif text-3xl">Inverno</span><span className="text-sm uppercase tracking-widest opacity-80">silenzio</span></div>
-              </div>
+              <p>Tra gli strumenti e la memoria, c&apos;è un campo di grano che ogni anno torna a crescere. Un piccolo appezzamento coltivato direttamente nello spazio espositivo: viene seminato, seguito, raccolto secondo i tempi dell&apos;anno agricolo. Non una ricostruzione, non una scenografia, ma grano vero, terra vera, lavoro vero. Un modo per dire che la memoria, a Bucolicò, non è qualcosa che si guarda: è qualcosa che ancora cresce. Il percorso si snoda seguendo il ritmo dell&apos;anno: la semina in autunno, il grano che cresce durante l&apos;inverno, la spigatura in primavera, il raccolto d&apos;estate. Non una successione didattica, ma una narrazione. Un modo di ricordare che il tempo, qui, non si misura in ore ma in stagioni.</p>
+              <p>Bucolicò è uno spazio dove il tempo si accorcia. Davanti a un trattore di inizio Novecento, un bambino chiede. Un anziano che lo ha guidato chiude gli occhi e ricorda. In quell&apos;istante sospeso tra la domanda e la risposta c&apos;è tutto ciò che un museo può sperare di essere. Storia che passa di bocca in bocca e si deposita nella memoria.</p>
 
-              <p>Un&apos;esperienza sensoriale e culturale. Uno spazio di incontro capace di ospitare generazioni diverse, eventi e iniziative in cui la storia non è solo esposta, ma vissuta da bambini, giovani e anziani insieme.</p>
-              <p className="font-serif text-2xl text-brand-peach italic mt-8 text-center">Custodia e visione. Radice e direzione. Il racconto di un cammino che unisce tradizione e innovazione.</p>
+              <p className="font-serif text-2xl text-brand-peach italic mt-8 text-center">Custodia e visione. Radice e direzione. Il racconto di un cammino che non è finito.</p>
             </div>
           </div>
         </motion.div>
