@@ -5,7 +5,7 @@ import { useRef } from "react";
 
 const images = [
   "/images/DSC1449.JPG",
-  "/images/DSC1488-1024x683.JPG",
+  "/images/DSC1488.JPG",
   "/images/DSC1393.jpg",
   "/images/babaciu.jpg",
   "/images/contadina.jpg",

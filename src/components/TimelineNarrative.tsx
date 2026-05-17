@@ -18,10 +18,10 @@ export default function TimelineNarrative() {
     <section ref={containerRef} className="relative min-h-[200vh] w-full bg-brand-white py-32" id="il-museo">
       {/* Immersive sticky background image with scroll-linked scale */}
       <div className="sticky top-0 h-screen w-full flex items-center justify-center overflow-hidden z-0">
-        <motion.div 
+        <motion.div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ 
-            backgroundImage: 'url("https://www.museobucolico.it/wp-content/uploads/santa-aerea-storica-1024x502.jpg")',
+          style={{
+            backgroundImage: 'url("/images/santa-aerea-storica-1024x502.jpg")',
             scale: backgroundScale
           }}
         />
@@ -29,8 +29,8 @@ export default function TimelineNarrative() {
       </div>
 
       <div className="relative z-10 max-w-5xl mx-auto px-6 -mt-[100vh]">
-        
-        <motion.div 
+
+        <motion.div
           style={{ y: yOffset1 }}
           className="min-h-screen flex items-center"
         >
@@ -45,7 +45,7 @@ export default function TimelineNarrative() {
           </div>
         </motion.div>
 
-        <motion.div 
+        <motion.div
           style={{ y: yOffset2 }}
           className="min-h-screen flex items-center"
         >

@@ -65,10 +65,7 @@ export default function CreditsClient() {
       <section className="relative py-24 px-6 overflow-hidden">
         <motion.div
           className="absolute inset-0 bg-cover bg-center z-0"
-          style={{
-            backgroundImage: "url(https://www.museobucolico.it/wp-content/uploads/2024/06/sfondo.png)",
-            y: heroY
-          }}
+          style={{ backgroundImage: 'url("https://www.cloudsami.net/bucolico/wp-content/uploads/2024/06/sfondo.png")', y: heroY }}
         />
         <div className="absolute inset-0 bg-brand-black/50 z-0" />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-peach z-[1]" />
