@@ -32,9 +32,12 @@ export default function CreditsClient() {
     "Fam. Giuliano Marchesin",
     "Fam. Piero Mazzucco",
     "Fam. Ugo Merlo e Ottavia Montanini",
+    "Fam. Filippo Mortarino",
     "Fam. Mauro Pugno",
     "Fam. Rasera",
     "Fam. Giuseppe Scarrone",
+    "Fam. Mauro Pugno",
+    "Fam. Tommaso Coppo",
     "Comune di Casale Monferrato",
     "Comune di Frassineto Po",
   ];
@@ -56,7 +59,8 @@ export default function CreditsClient() {
     grafica: "Piero Bergamelli",
     foto: "Samantha Scarrone – Stefano Bragato – Manuel Sacchi",
     web: "Samantha Battezzati",
-    accoglienza: "Raffaella Glionna – Aurora Croatto – Clelia Anoffo – Giuliano Anoffo – Mariangela Brugnone – Alessandra Rocchetta",
+    musica: "Giuliano Anoffo",
+    accoglienza: "Raffaella Glionna – Aurora Croatto – Clelia Anoffo – Mariangela Brugnone – Alessandra Rocchetta",
   };
 
   return (

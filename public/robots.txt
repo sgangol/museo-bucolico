@@ -1,0 +1,7 @@
+# Robots.txt for Museo Bucolicò
+# https://www.museobucolico.it
+
+User-agent: *
+Allow: /
+
+Sitemap: https://www.museobucolico.it/sitemap.xml

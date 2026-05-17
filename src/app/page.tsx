@@ -6,6 +6,33 @@ import CommunitySection from "@/components/CommunitySection";
 import VisitInfo from "@/components/VisitInfo";
 import Footer from "@/components/Footer";
 import CTAButton from "@/components/CTAButton";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Museo Bucolicò - Primo museo agricolo open-air del Piemonte",
+  description: "Museo Bucolicò: il primo museo agricolo open air a Santa Maria del Tempio, Casale Monferrato. Un viaggio immersivo tra storia, memoria e stagioni.",
+  openGraph: {
+    title: "Museo Bucolicò - Primo museo agricolo open-air del Piemonte",
+    description: "Il primo museo agricolo open air a Santa Maria del Tempio, nel cuore del Monferrato.",
+    url: "https://www.museobucolico.it",
+    siteName: "Museo Bucolicò",
+    locale: "it_IT",
+    type: "website",
+    images: [
+      {
+        url: "/og-home.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Museo Bucolicò - La Memoria Contadina",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Museo Bucolicò - Primo museo agricolo open-air del Piemonte",
+    description: "Il primo museo agricolo open air a Santa Maria del Tempio, nel cuore del Monferrato.",
+  },
+};
 
 export default function Home() {
   return (
