@@ -19,7 +19,7 @@ export default function PercheBucolicoConta() {
       <motion.div
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage: 'url("https://www.museobucolico.it/wp-content/uploads/santa-aerea-storica-1024x502.jpg")',
+          backgroundImage: 'url("/images/e96e0bba-195a-4f7e-81d5-dd5711f27a19.jpg")',
           y: bgY
         }}
       />

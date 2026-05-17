@@ -16,16 +16,16 @@ export default function CommunitySection() {
 
   return (
     <section ref={containerRef} className="relative min-h-[120vh] w-full flex items-center z-10 overflow-hidden" id="chi-siamo">
-      
+
       {/* Immersive Background Image with parallax */}
-      <motion.div 
+      <motion.div
         className="absolute inset-0 bg-cover bg-center z-0 w-full h-[120%]"
-        style={{ 
-          backgroundImage: 'url("https://www.museobucolico.it/wp-content/uploads/la-strada-di-santa-1024x741.jpg")',
+        style={{
+          backgroundImage: 'url("/images/la-strada-di-santa-1024x741.jpg")',
           y: bgY
         }}
       />
-      
+
       {/* Gradient Overlay for transitions and text readability */}
       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-brand-white/80 to-brand-white z-0" />
       <div className="absolute inset-0 bg-gradient-to-t from-brand-white via-transparent to-transparent z-0" />
@@ -33,25 +33,25 @@ export default function CommunitySection() {
       <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-brand-peach to-transparent z-0" />
 
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center py-24">
-        
+
         {/* Secondary Image floating, with scroll parallax */}
         <div className="hidden lg:block relative">
-          <motion.div 
+          <motion.div
             style={{ y: imgY }}
             className="w-3/4 aspect-[4/3] rounded-sm shadow-2xl overflow-hidden ml-auto border-4 border-brand-white/50"
           >
-            <div 
+            <div
               className="w-full h-full bg-cover bg-center mix-blend-luminosity"
-              style={{ backgroundImage: 'url("https://www.museobucolico.it/wp-content/uploads/santa_blackandwhite-1024x722.jpg")' }}
+              style={{ backgroundImage: 'url("/images/santa_blackandwhite-1024x722.jpg")' }}
             />
           </motion.div>
         </div>
 
-        <motion.div 
+        <motion.div
           style={{ y: textY }}
           className="bg-brand-white/95 backdrop-blur-md p-8 md:p-12 lg:p-16 rounded-sm shadow-xl lg:bg-transparent lg:shadow-none lg:backdrop-blur-none lg:p-0"
         >
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false, margin: "-50px" }}
@@ -60,7 +60,7 @@ export default function CommunitySection() {
           >
             Chi siamo
           </motion.h2>
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false, margin: "-50px" }}
