@@ -267,6 +267,12 @@ export default function CreditsClient() {
             </div>
             <div className="border-b border-brand-gray/20 pb-4">
               <h3 className="font-sans text-sm text-brand-red uppercase tracking-wider mb-1">
+                Musica
+              </h3>
+              <p className="font-serif text-xl text-brand-dark">{organigramma.musica}</p>
+            </div>
+            <div className="border-b border-brand-gray/20 pb-4">
+              <h3 className="font-sans text-sm text-brand-red uppercase tracking-wider mb-1">
                 Accoglienza
               </h3>
               <p className="font-serif text-xl text-brand-dark">
