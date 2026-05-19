@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import SmoothScrolling from "@/components/SmoothScrolling";
+import { Analytics } from "@vercel/analytics/next";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const playfair = Playfair_Display({
@@ -64,6 +65,7 @@ export default function RootLayout({
         <SmoothScrolling>
           {children}
         </SmoothScrolling>
+        <Analytics />
       </body>
     </html>
   );
