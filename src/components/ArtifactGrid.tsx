@@ -4,8 +4,8 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
 const images = [
-  "/images/DSC1449.webp",
-  "/images/DSC1488.webp",
+  "/images/bandiere.webp",
+  "/images/foto_aerea.webp",
   "/images/DSC1393.webp",
   "/images/babaciu.webp",
   "/images/contadina.webp",
