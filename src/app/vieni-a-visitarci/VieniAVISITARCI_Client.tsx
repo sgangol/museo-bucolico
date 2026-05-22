@@ -21,7 +21,7 @@ export default function VieniAVISITARCI_Client() {
         <motion.div
           className="absolute inset-0 bg-cover bg-center z-0 scale-110"
           style={{
-            backgroundImage: 'url("https://www.cloudsami.net/bucolico/wp-content/uploads/2024/06/sfondo.png")'
+            backgroundImage: 'url("/images/sfondo.webp")'
           }}
           animate={{ scale: [1, 1.1, 1] }}
           transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
@@ -80,7 +80,7 @@ export default function VieniAVISITARCI_Client() {
           >
             <div className="bg-white rounded-xl shadow-2xl rotate-1 p-4 md:p-6">
               <Image
-                src="/images/mappa_museo.png"
+                src="/images/mappa_museo.webp"
                 alt="Mappa del Museo Bucolicò"
                 width={1200}
                 height={800}

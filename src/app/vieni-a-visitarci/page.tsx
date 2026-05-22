@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/og-default.jpg",
+        url: "/og-default.webp",
         width: 1200,
         height: 630,
         alt: "Visita Museo Bucolicò",

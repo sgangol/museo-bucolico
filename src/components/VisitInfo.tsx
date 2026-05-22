@@ -13,7 +13,7 @@ export default function VisitInfo() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false, margin: "-50px" }}
           transition={{ duration: 0.8 }}
-          src="/images/logo-museo-bucolico.png"
+          src="/images/logo-museo-bucolico.webp"
           alt="Bucolicò Logo"
           className="w-48 mb-16"
         />

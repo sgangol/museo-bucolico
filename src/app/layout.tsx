@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     description: "Il primo museo agricolo open air a Santa Maria del Tempio, nel cuore del Monferrato.",
     images: [
       {
-        url: "/og-default.jpg",
+        url: "/og-default.webp",
         width: 1200,
         height: 630,
         alt: "Museo Bucolicò - La Memoria Contadina",

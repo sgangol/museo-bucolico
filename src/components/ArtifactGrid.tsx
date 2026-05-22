@@ -4,12 +4,12 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
 const images = [
-  "/images/DSC1449.JPG",
-  "/images/DSC1488.JPG",
-  "/images/DSC1393.jpg",
-  "/images/babaciu.jpg",
-  "/images/contadina.jpg",
-  "/images/e96e0bba-195a-4f7e-81d5-dd5711f27a19.jpg"
+  "/images/DSC1449.webp",
+  "/images/DSC1488.webp",
+  "/images/DSC1393.webp",
+  "/images/babaciu.webp",
+  "/images/contadina.webp",
+  "/images/e96e0bba-195a-4f7e-81d5-dd5711f27a19.webp"
 ];
 
 export default function ArtifactGrid() {

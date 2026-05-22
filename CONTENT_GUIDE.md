@@ -15,7 +15,7 @@ Per modificare uno sfondo, ti basta aprire il file interessato e sostituire l'UR
 
 2. **Galleria Fotografica (L'Emersione della Memoria):**
    - Apri `src/components/ArtifactGrid.tsx`
-   - Attualmente usa immagini generiche da Unsplash. Troverai un blocco `backgroundImage: url(...)`. Puoi caricare le tue immagini nella cartella `public/images/` e scrivere `backgroundImage: url('/images/foto1.jpg')`.
+   - Attualmente usa immagini generiche da Unsplash. Troverai un blocco `backgroundImage: url(...)`. Puoi caricare le tue immagini nella cartella `public/images/` e scrivere `backgroundImage: url('/images/foto1.webp')`.
 
 3. **Collage della Comunità:**
    - Apri `src/components/CommunitySection.tsx`

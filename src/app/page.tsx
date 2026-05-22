@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/og-home.jpg",
+        url: "/og-home.webp",
         width: 1200,
         height: 630,
         alt: "Museo Bucolicò - La Memoria Contadina",

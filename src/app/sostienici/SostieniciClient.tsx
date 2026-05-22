@@ -53,7 +53,7 @@ export default function SostieniciClient() {
         <motion.div
           className="absolute inset-0 bg-cover bg-center z-0"
           style={{
-            backgroundImage: 'url("https://www.cloudsami.net/bucolico/wp-content/uploads/2024/06/sfondo.png")',
+            backgroundImage: 'url("/images/sfondo.webp")',
             y: heroY
           }}
         />

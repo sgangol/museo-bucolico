@@ -295,10 +295,10 @@ src="https://example.com/new-image.jpg"
 **Local image (in public/):**
 ```tsx
 // Before
-src="/images/old-name.jpg"
+src="/images/old-name.webp"
 
 // After
-src="/images/new-name.jpg"
+src="/images/new-name.webp"
 ```
 
 ### Critical Warnings

@@ -21,7 +21,7 @@ export default function CommunitySection() {
       <motion.div
         className="absolute inset-0 bg-cover bg-center z-0 w-full h-[120%]"
         style={{
-          backgroundImage: 'url("/images/la-strada-di-santa-1024x741.jpg")',
+          backgroundImage: 'url("/images/la-strada-di-santa-1024x741.webp")',
           y: bgY
         }}
       />
@@ -42,7 +42,7 @@ export default function CommunitySection() {
           >
             <div
               className="w-full h-full bg-cover bg-center mix-blend-luminosity"
-              style={{ backgroundImage: 'url("/images/santa_blackandwhite-1024x722.jpg")' }}
+              style={{ backgroundImage: 'url("/images/santa_blackandwhite-1024x722.webp")' }}
             />
           </motion.div>
         </div>

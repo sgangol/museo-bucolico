@@ -21,7 +21,7 @@ export default function TimelineNarrative() {
         <motion.div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: 'url("/images/santa-aerea-storica-1024x502.jpg")',
+            backgroundImage: 'url("/images/santa-aerea-storica-1024x502.webp")',
             scale: backgroundScale
           }}
         />

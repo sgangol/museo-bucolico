@@ -9,7 +9,7 @@ export default function SeasonalHero() {
       {/* Background image from test site */}
       <div
         className="absolute inset-0 bg-cover bg-center z-0 scale-105"
-        style={{ backgroundImage: 'url("https://www.cloudsami.net/bucolico/wp-content/uploads/2024/06/sfondo.png")' }}
+        style={{ backgroundImage: 'url("/images/sfondo.webp")' }}
       />
       {/* Dark overlay to make text more readable */}
       <div className="absolute inset-0 bg-black/30 z-0" />
