@@ -40,6 +40,7 @@ export default function CreditsClient() {
     "Fam. Giuseppe Scarrone",
     "Fam. Mauro Pugno",
     "Fam. Tommaso Coppo",
+    "Fam. Zemide Arnaldo e Ghietti Angela",
     "Comune di Casale Monferrato",
     "Comune di Frassineto Po",
   ];
