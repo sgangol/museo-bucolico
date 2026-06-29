@@ -178,14 +178,26 @@ function PostcardCarousel() {
   const isPaused = useRef(false);
   const x = useMotionValue(0);
   const photos = [
-    { id: 1, caption: "Amson 2025", rotation: -1.5 },
-    { id: 2, caption: "La trebbiatura", rotation: 2 },
-    { id: 3, caption: "I bambini", rotation: -0.5 },
-    { id: 4, caption: "Il raccolto", rotation: 1.5 },
-    { id: 5, caption: "Tradizione", rotation: -2 },
-    { id: 6, caption: "La comunità", rotation: 0.8 },
-    { id: 7, caption: "I trattori d'epoca", rotation: -1 },
-    { id: 8, caption: "Il grano", rotation: 1.2 },
+    { id: 1, src: "/images/amson/amson-01.webp", caption: "La festa", rotation: -1.5 },
+    { id: 2, src: "/images/amson/amson-02.webp", caption: "Tradizione", rotation: 2 },
+    { id: 3, src: "/images/amson/amson-03.webp", caption: "Il grano", rotation: -0.5 },
+    { id: 4, src: "/images/amson/amson-04.webp", caption: "Comunità", rotation: 1.5 },
+    { id: 5, src: "/images/amson/amson-05.webp", caption: "Campagnole", rotation: -2 },
+    { id: 6, src: "/images/amson/amson-06.webp", caption: "Momenti", rotation: 0.8 },
+    { id: 7, src: "/images/amson/amson-07.webp", caption: "All'opera", rotation: -1 },
+    { id: 8, src: "/images/amson/amson-08.webp", caption: "Raccolto", rotation: 1.2 },
+    { id: 9, src: "/images/amson/amson-09.webp", caption: "Giovanni e Piero", rotation: -0.8 },
+    { id: 10, src: "/images/amson/amson-10.webp", caption: "Giugno 2023", rotation: 1.8 },
+    { id: 11, src: "/images/amson/amson-11.webp", caption: "Lavorazioni", rotation: -1.2 },
+    { id: 12, src: "/images/amson/amson-12.webp", caption: "La trebbiatura", rotation: 0.5 },
+    { id: 13, src: "/images/amson/amson-13.webp", caption: "I bambini", rotation: -2.5 },
+    { id: 14, src: "/images/amson/amson-14.webp", caption: "I trattori", rotation: 1 },
+    { id: 15, src: "/images/amson/amson-15.webp", caption: "Il raccolto", rotation: -1.8 },
+    { id: 16, src: "/images/amson/amson-16.webp", caption: "Festa", rotation: 2.2 },
+    { id: 17, src: "/images/amson/amson-17.webp", caption: "Ugo Anteo", rotation: -0.3 },
+    { id: 18, src: "/images/amson/amson-18.webp", caption: "Ugo", rotation: 1.3 },
+    { id: 19, src: "/images/amson/amson-19.webp", caption: "L'Amson", rotation: -1.7 },
+    { id: 20, src: "/images/amson/amson-20.webp", caption: "Ricordi", rotation: 0.2 },
   ];
   const cardWidth = 288;
   const gap = 32;
@@ -193,7 +205,7 @@ function PostcardCarousel() {
 
   useAnimationFrame((_, delta) => {
     if (isPaused.current) return;
-    const speed = 40; // px/s
+    const speed = 50;
     const newX = x.get() - speed * (delta / 1000);
     if (newX <= -totalWidth) {
       x.set(0);
@@ -223,11 +235,13 @@ function PostcardCarousel() {
               transition: { duration: 0.3 },
             }}
           >
-            <div className="w-full aspect-[4/3] bg-gradient-to-br from-brand-peach to-brand-gray/20 flex items-center justify-center text-brand-gray/40 font-serif text-sm mb-3 overflow-hidden rounded-sm">
-              <div className="text-center p-4">
-                <span className="text-4xl block mb-2">📸</span>
-                <span>Foto {photo.id}</span>
-              </div>
+            <div className="w-full aspect-[4/3] overflow-hidden rounded-sm mb-3">
+              <img
+                src={photo.src}
+                alt={photo.caption}
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
             </div>
             <p className="font-serif text-sm text-center text-brand-gray italic">
               &ldquo;{photo.caption}&rdquo;
