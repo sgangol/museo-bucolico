@@ -5,6 +5,7 @@ import PercheBucolicoConta from "@/components/PercheBucolicoConta";
 import CommunitySection from "@/components/CommunitySection";
 import VisitInfo from "@/components/VisitInfo";
 import Footer from "@/components/Footer";
+import AmsonHomeCTA from "@/components/AmsonHomeCTA";
 import CTAButton from "@/components/CTAButton";
 import type { Metadata } from "next";
 
@@ -42,6 +43,7 @@ export default function Home() {
       <TimelineNarrative />
       <ArtifactGrid />
       <PercheBucolicoConta />
+      <AmsonHomeCTA />
       <CTAButton />
       <VisitInfo />
       <Footer />
