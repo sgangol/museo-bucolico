@@ -8,6 +8,7 @@ export default function Footer() {
         <p>&copy; {year} Museo dell&apos;Agricoltura Bucolicò - Santa Maria del Tempio</p>
         <div className="flex gap-6">
           <Link href="/" className="hover:text-brand-red transition-colors">Chi siamo</Link>
+          <Link href="/amson" className="hover:text-brand-red transition-colors">Amson</Link>
           <Link href="/sostienici" className="hover:text-brand-red transition-colors">Sostienici</Link>
           <Link href="/credits" className="hover:text-brand-red transition-colors">Credits</Link>
           <Link href="/contatti" className="hover:text-brand-red transition-colors">Contatti</Link>
