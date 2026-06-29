@@ -1,9 +1,9 @@
 "use client";
 
-import { motion, useScroll, useTransform, useAnimationControls } from "framer-motion";
+import { motion, useScroll, useTransform, useMotionValue, useAnimationFrame } from "framer-motion";
 import { usePathname } from "next/navigation";
 import { ChevronDown } from "lucide-react";
-import { useRef, useEffect, useState } from "react";
+import { useRef } from "react";
 import Footer from "@/components/Footer";
 
 export default function AmsonClient() {
@@ -175,8 +175,8 @@ export default function AmsonClient() {
 
 /* ── POSTCARD CAROUSEL ── */
 function PostcardCarousel() {
-  const controls = useAnimationControls();
-  const [isPaused, setIsPaused] = useState(false);
+  const isPaused = useRef(false);
+  const x = useMotionValue(0);
   const photos = [
     { id: 1, caption: "Amson 2025", rotation: -1.5 },
     { id: 2, caption: "La trebbiatura", rotation: 2 },
@@ -187,34 +187,30 @@ function PostcardCarousel() {
     { id: 7, caption: "I trattori d'epoca", rotation: -1 },
     { id: 8, caption: "Il grano", rotation: 1.2 },
   ];
-  const cardWidth = 288; // w-72 = 288px
-  const gap = 32; // gap-8 = 32px
+  const cardWidth = 288;
+  const gap = 32;
   const totalWidth = (cardWidth + gap) * photos.length;
 
-  useEffect(() => {
-    if (isPaused) {
-      controls.stop();
+  useAnimationFrame((_, delta) => {
+    if (isPaused.current) return;
+    const speed = 40; // px/s
+    const newX = x.get() - speed * (delta / 1000);
+    if (newX <= -totalWidth) {
+      x.set(0);
     } else {
-      controls.start({
-        x: [-totalWidth, 0],
-        transition: {
-          duration: 60,
-          ease: "linear",
-          repeat: Infinity,
-        },
-      });
+      x.set(newX);
     }
-  }, [isPaused, controls, totalWidth]);
+  });
 
   return (
     <div
       className="relative w-full overflow-hidden py-8"
-      onMouseEnter={() => setIsPaused(true)}
-      onMouseLeave={() => setIsPaused(false)}
+      onMouseEnter={() => { isPaused.current = true; }}
+      onMouseLeave={() => { isPaused.current = false; }}
     >
       <motion.div
         className="flex gap-8 w-max px-4"
-        animate={controls}
+        style={{ x }}
       >
         {[...photos, ...photos].map((photo, i) => (
           <motion.div
