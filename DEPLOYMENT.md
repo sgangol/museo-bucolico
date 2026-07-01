@@ -10,6 +10,18 @@ Essendo basato su Next.js, il deployment su Vercel è automatico e non richiede 
 4. Vercel capirà automaticamente che è un progetto Next.js. Lascia i settaggi di default e clicca "Deploy".
 5. Il sito sarà online con certificato SSL automatico.
 
+    # Verifica cosa è cambiato
+    git status
+
+    # Aggiungi i file modificati
+    git add .
+
+    # Crea un commit descrittivo
+    git commit -m "feat: aggiornato testo homepage e immagine hero"
+
+    # Push su GitHub (Vercel si attiverà automaticamente)
+    git push origin main
+
 ## Opzione 2: Docker (Server Privato / VPS)
 Se disponi di un server (es. Aruba, DigitalOcean, Hetzner) e vuoi usare Docker, il progetto include già tutto il necessario. La build sfrutta il meccanismo `standalone` di Next.js per creare un container leggerissimo.
 

@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Amson - Festa del Grano | Museo Bucolicò",
   description:
-    "L'Amson a la Madona è la rievocazione della mietitura e trebbiatura del grano a Santa Maria del Tempio. Giunta alla 34ª edizione, è la festa più importante del Museo Bucolicò.",
+    "L'Amson a la Madona è la rievocazione della mietitura e trebbiatura del grano a Santa Maria del Tempio. Giunta alla 34ª edizione.",
   openGraph: {
     title: "Amson - Festa del Grano | Museo Bucolicò",
     description:

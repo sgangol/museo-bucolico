@@ -33,7 +33,7 @@ export default function AmsonClient() {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, ease: "easeOut" }}
-            src="https://www.cloudsami.net/bucolico/wp-content/uploads/2024/07/SANTA-SCUDO-con-scritta-rossa.png"
+            src="/images/logo-museo-bucolico-b.webp"
             alt="Bucolicò Scudo"
             className="w-48 md:w-64 lg:w-80 mb-8 mx-auto drop-shadow-2xl"
           />
@@ -41,7 +41,7 @@ export default function AmsonClient() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
-            className="font-serif font-bold text-6xl md:text-8xl text-brand-white drop-shadow-lg"
+            className="font-serif font-bold text-8xl md:text-9xl lg:text-[12rem] leading-none text-brand-white drop-shadow-lg"
           >
             AMSON
           </motion.h1>
@@ -49,7 +49,7 @@ export default function AmsonClient() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
-            className="font-serif text-2xl md:text-3xl text-brand-peach mt-2 drop-shadow-lg"
+            className="font-serif text-3xl md:text-5xl lg:text-7xl text-brand-peach mt-4 drop-shadow-lg"
           >
             34° edizione
           </motion.p>
@@ -146,14 +146,14 @@ export default function AmsonClient() {
       </section>
 
       {/* ── CAROSELLO CARTOLINE ── */}
-      <section className="relative py-24 overflow-hidden bg-brand-peach">
+      <section className="relative py-24 overflow-hidden bg-brand-red">
         <div className="max-w-7xl mx-auto px-6 mb-12">
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false, margin: "-50px" }}
             transition={{ duration: 0.8 }}
-            className="font-serif text-4xl md:text-5xl lg:text-6xl text-brand-dark text-center drop-shadow-sm"
+            className="font-serif text-4xl md:text-5xl lg:text-6xl text-brand-white text-center drop-shadow-sm"
           >
             La festa in immagini
           </motion.h2>
@@ -162,7 +162,7 @@ export default function AmsonClient() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false, margin: "-50px" }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="font-serif text-xl text-brand-gray italic text-center mt-4"
+            className="font-serif text-xl text-brand-white/80 italic text-center mt-4"
           >
             Scorri per rivivere i momenti più belli
           </motion.p>
