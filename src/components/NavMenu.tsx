@@ -3,7 +3,7 @@
 import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
 const links = [
@@ -37,6 +37,7 @@ const itemVariants = {
 export default function NavMenu() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
+  const prefersReduced = useReducedMotion();
 
   const close = useCallback(() => setOpen(false), []);
 
@@ -55,15 +56,69 @@ export default function NavMenu() {
     return () => window.removeEventListener("keydown", onKey);
   }, [open, close]);
 
-  // Lock body scroll when open
+  // Lock body scroll when open (target both html and body for Lenis compat)
   useEffect(() => {
     if (open) {
       document.body.style.overflow = "hidden";
+      document.documentElement.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "";
+      document.documentElement.style.overflow = "";
     }
-    return () => { document.body.style.overflow = ""; };
+    return () => {
+      document.body.style.overflow = "";
+      document.documentElement.style.overflow = "";
+    };
   }, [open]);
+
+  // When prefersReduced, render without animation
+  if (prefersReduced) {
+    return (
+      <>
+        <button
+          onClick={() => setOpen(true)}
+          className="fixed top-6 left-6 z-50 flex items-center justify-center w-12 h-12 rounded-full bg-brand-red text-white shadow-lg"
+          aria-label="Apri menu"
+        >
+          <Menu size={24} />
+        </button>
+
+        {open && (
+          <>
+            <div className="fixed inset-0 z-30 bg-black/50" onClick={close} />
+            <nav className="fixed top-0 left-0 z-40 h-full w-[280px] bg-brand-red shadow-2xl flex flex-col">
+              <div className="flex justify-end p-4">
+                <button
+                  onClick={close}
+                  className="flex items-center justify-center w-10 h-10 rounded-full text-white/80 hover:text-white hover:bg-white/10"
+                  aria-label="Chiudi menu"
+                >
+                  <X size={22} />
+                </button>
+              </div>
+              <ul className="flex-1 flex flex-col justify-center gap-2 px-8">
+                {links.map((link) => (
+                  <li key={link.href}>
+                    <Link
+                      href={link.href}
+                      onClick={close}
+                      className={`block text-2xl font-serif tracking-wide ${
+                        pathname === link.href
+                          ? "text-white underline underline-offset-4 decoration-white/60"
+                          : "text-white/80 hover:text-white"
+                      }`}
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          </>
+        )}
+      </>
+    );
+  }
 
   return (
     <>
