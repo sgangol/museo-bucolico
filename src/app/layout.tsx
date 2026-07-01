@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import SmoothScrolling from "@/components/SmoothScrolling";
+import NavMenu from "@/components/NavMenu";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const playfair = Playfair_Display({
@@ -61,6 +62,7 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${playfair.variable} font-sans bg-brand-white text-brand-dark antialiased selection:bg-brand-red selection:text-white`}
       >
+        <NavMenu />
         <SmoothScrolling>
           {children}
         </SmoothScrolling>
