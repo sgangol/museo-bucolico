@@ -183,22 +183,22 @@ function PostcardCarousel() {
   const isPaused = useRef(false);
   const x = useMotionValue(0);
   const photos = [
-    { id: 1, src: "/images/amson/amson-01.webp", caption: "La trebbia", rotation: -1.5 },
-    { id: 2, src: "/images/amson/amson-02.webp", caption: "La raccolta", rotation: 2 },
+    { id: 1, src: "/images/amson/amson-01.webp", caption: "La pressa all'opera", rotation: -1.5 },
+    { id: 2, src: "/images/amson/amson-02.webp", caption: "La 30esima edizione", rotation: 2 },
     { id: 3, src: "/images/amson/IMG_8793.webp", caption: "La gente", rotation: -0.5 },
-    { id: 4, src: "/images/amson/amson-04.webp", caption: "Il quartiere", rotation: 1.5 },
+    { id: 4, src: "/images/amson/amson-04.webp", caption: "I trattorini di Maino", rotation: 1.5 },
     { id: 5, src: "/images/amson/amson-05.webp", caption: "Campagnole", rotation: -2 },
     { id: 6, src: "/images/amson/amson-06.webp", caption: "Momenti", rotation: 0.8 },
-    { id: 7, src: "/images/amson/amson-07.webp", caption: "All'opera", rotation: -1 },
-    { id: 8, src: "/images/amson/amson-08.webp", caption: "Raccolto", rotation: 1.2 },
+    { id: 7, src: "/images/amson/amson-07.webp", caption: "La trebbia e la pressa", rotation: -1 },
+    { id: 8, src: "/images/amson/amson-08.webp", caption: "Le prime edizioni", rotation: 1.2 },
     { id: 9, src: "/images/amson/amson-09.webp", caption: "Giovanni e Piero", rotation: -0.8 },
-    { id: 10, src: "/images/amson/amson-10.webp", caption: "Giugno 2023", rotation: 1.8 },
+    { id: 10, src: "/images/amson/amson-10.webp", caption: "Verso la Curmà", rotation: 1.8 },
     { id: 13, src: "/images/amson/amson-13.webp", caption: "Il taglio", rotation: -2.5 },
     { id: 15, src: "/images/amson/amson-15.webp", caption: "La concimazione", rotation: -1.8 },
-    { id: 16, src: "/images/amson/amson-16.webp", caption: "Padre Felice", rotation: 2.2 },
-    { id: 17, src: "/images/amson/amson-17.webp", caption: "Ugo Anteo", rotation: -0.3 },
-    { id: 18, src: "/images/amson/amson-18.webp", caption: "La trebbiatura", rotation: 1.3 },
-    { id: 19, src: "/images/amson/amson-19.webp", caption: "L'amsura", rotation: -1.7 },
+    { id: 16, src: "/images/amson/amson-16.webp", caption: "La Santa Messa al campo con Padre Felice", rotation: 2.2 },
+    { id: 17, src: "/images/amson/amson-17.webp", caption: "Ugo e l'Anteo", rotation: -0.3 },
+    { id: 18, src: "/images/amson/amson-18.webp", caption: "La mietilega", rotation: 1.3 },
+    { id: 19, src: "/images/amson/amson-19.webp", caption: "Falce con apparecchio", rotation: -1.7 },
     { id: 20, src: "/images/amson/amson-20.webp", caption: "Ricordi", rotation: 0.2 },
   ];
   const cardWidth = 288;
