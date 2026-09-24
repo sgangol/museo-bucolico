@@ -16,11 +16,13 @@ export default function CreditsClient() {
 
   const exhibitors = [
     "Roberto Bedon",
+    "Giuseppe Berra",
     "Rosella Conti",
     "Paolo Costanzo",
     "Tiziana Guaschino",
     "Marco Leporati",
     "Mario Novelli",
+    "Anna Pasquariello",
     "Gianni Rosolen",
     "Francesco Tiengo",
     "Franco Ubertazzi",
@@ -51,22 +53,27 @@ export default function CreditsClient() {
   const organigramma = {
     presidente: "Sabrina Barbano",
     vicePresidente: "Matteo Mazzucco",
-    segretario: "Matteo Biasi",
-    tesoriere: "Riccardo Basso",
+    segretario: "Riccardo Basso",
     relazioni: "Patrizio Rocchetta",
     presidenteOnorario: "Don Giuseppe Cesana",
     progetto: "Arch. Simone Filippini",
-    allestimenti: "Matteo Soldi – Enrico Ganora – Mirko Mazzucco",
+    servizisupportoedecororo: "Mariangela Brugnone",
+    logistica: "Matteo Soldi – Mirko Mazzucco",
+    sicurezza: "Matteo Biasi",
     consulente: "Michele Giordano",
     conservatore: "Andrea Fiori – Paolo Fiori",
     restauratore: "Giorgio Barbano",
     partnership: "Rossella Filippini",
     serviziEducativi: "Gigi Fiori",
+    innovazionedigitaleepartnershiptecnologiche: "Enrico Ganora",
     grafica: "Piero Bergamelli",
     foto: "Samantha Scarrone – Stefano Bragato – Manuel Sacchi",
     web: "Samantha Battezzati",
     musica: "Giuliano Anoffo",
-    accoglienza: "Raffaella Glionna – Aurora Croatto – Clelia Anoffo – Mariangela Brugnone – Alessandra Rocchetta",
+    accoglienza: "Aurora Croatto – Clelia Anoffo",
+    accoglienzadonatori: "Andrea Ortolan",
+    ristorazione: "Raffaella Glionna",
+    tesseramenti: "Alessandra Rocchetta",
   };
 
   return (
@@ -173,14 +180,6 @@ export default function CreditsClient() {
             </div>
             <div className="border-b border-brand-gray/20 pb-4">
               <h3 className="font-sans text-sm text-brand-red uppercase tracking-wider mb-1">
-                Tesoriere
-              </h3>
-              <p className="font-serif text-xl text-brand-dark">
-                {organigramma.tesoriere}
-              </p>
-            </div>
-            <div className="border-b border-brand-gray/20 pb-4">
-              <h3 className="font-sans text-sm text-brand-red uppercase tracking-wider mb-1">
                 Pubbliche Relazioni
               </h3>
               <p className="font-serif text-xl text-brand-dark">
@@ -205,10 +204,18 @@ export default function CreditsClient() {
             </div>
             <div className="border-b border-brand-gray/20 pb-4">
               <h3 className="font-sans text-sm text-brand-red uppercase tracking-wider mb-1">
-                Allestimenti
+                Servizio supporto decoro
               </h3>
               <p className="font-serif text-xl text-brand-dark">
-                {organigramma.allestimenti}
+                {organigramma.servizisupportoedecororo}
+              </p>
+            </div>
+            <div className="border-b border-brand-gray/20 pb-4">
+              <h3 className="font-sans text-sm text-brand-red uppercase tracking-wider mb-1">
+                Logistica
+              </h3>
+              <p className="font-serif text-xl text-brand-dark">
+                {organigramma.logistica}
               </p>
             </div>
             <div className="border-b border-brand-gray/20 pb-4">
@@ -253,6 +260,14 @@ export default function CreditsClient() {
             </div>
             <div className="border-b border-brand-gray/20 pb-4">
               <h3 className="font-sans text-sm text-brand-red uppercase tracking-wider mb-1">
+                Innovazione digitale e partnership tecnologiche
+              </h3>
+              <p className="font-serif text-xl text-brand-dark">
+                {organigramma.innovazionedigitaleepartnershiptecnologiche}
+              </p>
+            </div>
+            <div className="border-b border-brand-gray/20 pb-4">
+              <h3 className="font-sans text-sm text-brand-red uppercase tracking-wider mb-1">
                 Grafica
               </h3>
               <p className="font-serif text-xl text-brand-dark">
@@ -283,6 +298,30 @@ export default function CreditsClient() {
               </h3>
               <p className="font-serif text-xl text-brand-dark">
                 {organigramma.accoglienza}
+              </p>
+            </div>
+            <div className="border-b border-brand-gray/20 pb-4">
+              <h3 className="font-sans text-sm text-brand-red uppercase tracking-wider mb-1">
+                Accoglienza donatori
+              </h3>
+              <p className="font-serif text-xl text-brand-dark">
+                {organigramma.accoglienzadonatori}
+              </p>
+            </div>
+            <div className="border-b border-brand-gray/20 pb-4">
+              <h3 className="font-sans text-sm text-brand-red uppercase tracking-wider mb-1">
+                Ristorazione
+              </h3>
+              <p className="font-serif text-xl text-brand-dark">
+                {organigramma.ristorazione}
+              </p>
+            </div>
+            <div className="border-b border-brand-gray/20 pb-4">
+              <h3 className="font-sans text-sm text-brand-red uppercase tracking-wider mb-1">
+                Tesseramenti
+              </h3>
+              <p className="font-serif text-xl text-brand-dark">
+                {organigramma.tesseramenti}
               </p>
             </div>
           </div>

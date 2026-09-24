@@ -53,8 +53,7 @@ export default function ArtifactGrid() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="font-sans text-xl md:text-2xl text-white/90 max-w-4xl mx-auto font-light leading-relaxed"
           >
-            Trattori e strumenti, provenienti da collezioni private e donati appositamente,
-            diventano patrimonio collettivo. Ogni oggetto custodisce una storia di fatica e innovazione,
+            Trattori e strumenti, provenienti da collezioni private diventano patrimonio collettivo. Ogni oggetto custodisce una storia di fatica e innovazione,
             di cambiamento e continuità.
           </motion.p>
         </div>
