@@ -180,6 +180,14 @@ export default function CreditsClient() {
             </div>
             <div className="border-b border-brand-gray/20 pb-4">
               <h3 className="font-sans text-sm text-brand-red uppercase tracking-wider mb-1">
+                Sicurezza
+              </h3>
+              <p className="font-serif text-xl text-brand-dark">
+                {organigramma.sicurezza}
+              </p>
+            </div>
+            <div className="border-b border-brand-gray/20 pb-4">
+              <h3 className="font-sans text-sm text-brand-red uppercase tracking-wider mb-1">
                 Pubbliche Relazioni
               </h3>
               <p className="font-serif text-xl text-brand-dark">
@@ -200,14 +208,6 @@ export default function CreditsClient() {
               </h3>
               <p className="font-serif text-xl text-brand-dark">
                 {organigramma.progetto}
-              </p>
-            </div>
-            <div className="border-b border-brand-gray/20 pb-4">
-              <h3 className="font-sans text-sm text-brand-red uppercase tracking-wider mb-1">
-                Servizio supporto decoro
-              </h3>
-              <p className="font-serif text-xl text-brand-dark">
-                {organigramma.servizisupportoedecororo}
               </p>
             </div>
             <div className="border-b border-brand-gray/20 pb-4">
@@ -310,10 +310,18 @@ export default function CreditsClient() {
             </div>
             <div className="border-b border-brand-gray/20 pb-4">
               <h3 className="font-sans text-sm text-brand-red uppercase tracking-wider mb-1">
-                Ristorazione
+                Servizio ospitalità e ristoro
               </h3>
               <p className="font-serif text-xl text-brand-dark">
                 {organigramma.ristorazione}
+              </p>
+            </div>
+            <div className="border-b border-brand-gray/20 pb-4">
+              <h3 className="font-sans text-sm text-brand-red uppercase tracking-wider mb-1">
+                Servizio supporto decoro
+              </h3>
+              <p className="font-serif text-xl text-brand-dark">
+                {organigramma.servizisupportoedecororo}
               </p>
             </div>
             <div className="border-b border-brand-gray/20 pb-4">
